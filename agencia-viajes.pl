@@ -33,6 +33,7 @@ viajeeconomico(Ciudad, Semanas, Hospedaje, PrecioTotal, PrecioMaximo) :-
 % Si no pasamos la cantidad de semanas y el precio total, nos otoroga la estructura sin realizar las operaciones matemáticas
 % Si le pasamos el precio total y no las semanas, nos predice la cantidad de semanas en base a toda la información brindada
 % Si la anterior predicción no tiene una respuesta concreta, deja planteada la estructura con las variables involucradas
+% Las predicciones se realizan cuando se poseen datos parciales, si no se llega a una respuesta, se muestra el resultado de la unificación
 viaje_clpfd(Ciudad, Semanas, Hospedaje, PrecioTotal) :-
     transporte(Ciudad, CostoTransporte),
     alojamiento(Ciudad, Hospedaje, CostoAlojamiento),
